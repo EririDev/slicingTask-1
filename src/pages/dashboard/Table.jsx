@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {FiInfo} from 'react-icons/fi'
 import {MdOutlineModeEdit} from 'react-icons/md'
 import {BsTrash3} from 'react-icons/bs'
@@ -51,6 +51,15 @@ const Table = () => {
     setData(newData)
   }
   const navigate = useNavigate()
+  useEffect(()=>{
+    const checkUserToken = ()=>{
+      const userToken = localStorage.getItem('token')
+      if(!userToken || userToken==='undefined'){
+        return navigate('/')
+      }
+    }
+    checkUserToken()
+  },[])
   return (
     <main className='w-full flex justify-center items-center p-20'>
         <table className='rounded-[20px] overflow-hidden shadow-lg' >

@@ -1,11 +1,21 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Back from '../../assets/bekbek.svg'
 import Gambar from '../../assets/card/Air-terjun.png'
 import Location from '../../assets/detail/location.svg'
 import Email from '../../assets/detail/email.svg'
 import Phone from '../../assets/detail/phone.svg'
 const Detail = () => {
+  const navigate = useNavigate()
+  useEffect(()=>{
+    const checkUserToken = ()=>{
+      const userToken = localStorage.getItem('token')
+      if(!userToken || userToken==='undefined'){
+        return navigate('/')
+      }
+    }
+    checkUserToken()
+  },[])
   return (
     <div className='w-full p-5  flex justify-center items-center'>
       <main className='w-[60%] '>

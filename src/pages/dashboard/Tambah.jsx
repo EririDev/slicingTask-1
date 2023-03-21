@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Input from '../../components/Input'
 import Button from '../../components/Button'
 import Gambar from '../../assets/gallery-export.svg'
+import { useNavigate } from 'react-router-dom'
 
 const Tambah = () => {
+  const navigate = useNavigate()
+  useEffect(()=>{
+    const checkUserToken = ()=>{
+      const userToken = localStorage.getItem('token')
+      if(!userToken || userToken==='undefined'){
+        return navigate('/')
+      }
+    }
+    checkUserToken()
+  },[])
   return (
     <div className='w-full h-screen p-20 flex justify-center items-center'>
       <main className='w-[60%] flex flex-col gap-5'>
