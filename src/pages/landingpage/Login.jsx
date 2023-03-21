@@ -26,6 +26,7 @@ axios.request(config)
 .then((response) => {
   console.log(JSON.stringify(response.data));
   localStorage.setItem('token',response.data.token)
+  localStorage.setItem('user',response.data.user.name)
   navigate('/dashboard/home')
 })
 .catch((error) => {

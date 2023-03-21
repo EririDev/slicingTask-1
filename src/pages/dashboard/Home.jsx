@@ -14,10 +14,13 @@ const Home = () => {
     }
     checkUserToken()
   },[])
+  const userName = localStorage.getItem('user')
   return (
+    
     <div >
         <main className='w-full flex flex-col items-center  '>
-         <nav className='flex justify-end w-[80%] '>
+         <nav className='flex justify-between items-center w-[80%] '>
+        <h1 className='font-[700] text-[30px]'>Hi,{userName}!</h1>
         <SearchBar/>
         </nav >
             <div className="content w-[80%] flex flex-wrap gap-x-[50px] gap-y-[30px] justify-center">
