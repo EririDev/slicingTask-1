@@ -5,7 +5,7 @@ import Gambar from '../../assets/card/Air-terjun.png'
 
 const Ubah = () => {
   return (
-    <div className='w-full p-20 flex justify-center items-center'>
+    <div className='w-full h-screen p-20 flex justify-center items-center'>
     <main className='w-[60%] flex flex-col gap-5'>
       <header>
         <h1 className='text-[#6889FF] font-[700] text-[30px]'>Ubah Wisata</h1>

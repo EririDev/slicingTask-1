@@ -5,7 +5,7 @@ import Gambar from '../../assets/gallery-export.svg'
 
 const Tambah = () => {
   return (
-    <div className='w-full p-20 flex justify-center items-center'>
+    <div className='w-full h-screen p-20 flex justify-center items-center'>
       <main className='w-[60%] flex flex-col gap-5'>
         <header>
           <h1 className='text-[#6889FF] font-[700] text-[30px]'>Tambah Wisata</h1>
