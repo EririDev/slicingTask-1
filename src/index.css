@@ -9,40 +9,5 @@
   box-sizing:border-box;
   font-family: Poppins;
 }
-td,th{
-  padding:20px
-}
 
-tr{
-  font-size:14px;
-  font-weight:400;
-  color:#212529;
-  border:1px solid #E7EAF0
-  }
 
-td{
- font-size:14px;
- color:#465170;
-}
-th{
-  padding:25px;
-  padding-bottom:30px;
-}
-td:nth-child(1){
-  width:2.5%
-}
-td:nth-child(2){
-  width:45%
-}
-td:nth-child(3){
-  width:35%
-}
-td:nth-child(4){
-  width:10%
-}
-td:nth-child(5){
-  width:2.5%
-}
-td:nth-child(6){
-  width:5%
-}
