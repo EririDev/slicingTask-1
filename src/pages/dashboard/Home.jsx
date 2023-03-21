@@ -16,10 +16,10 @@ const Home = () => {
   },[])
   return (
     <div >
-         <nav className='flex justify-end mr-[150px]'>
+        <main className='w-full flex flex-col items-center  '>
+         <nav className='flex justify-end w-[80%] '>
         <SearchBar/>
         </nav >
-        <main className='w-full flex justify-center '>
             <div className="content w-[80%] flex flex-wrap gap-x-[50px] gap-y-[30px] justify-center">
                 <NavLink to='/detail'><Card/></NavLink>
                 <NavLink to='/detail'><Card/></NavLink>
