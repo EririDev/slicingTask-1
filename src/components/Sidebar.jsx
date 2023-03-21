@@ -5,6 +5,7 @@ import {CgAddR} from 'react-icons/cg'
 import {FiEdit} from 'react-icons/fi'
 import {IoExitOutline} from 'react-icons/io5'
 import { NavLink } from 'react-router-dom'
+import {GrClose} from 'react-icons/gr'
 
 
 
@@ -29,7 +30,8 @@ const Sidebar = () => {
         </div>     
     </div>
     {show?(<div className='w-full h-full bg-[rgba(0,0,0,0.5)] fixed z-20'>
-        <div className="logout w-[700px] h-[350px] rounded-[20px] bg-white fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center gap-20">
+        <div className="logout w-[700px] h-[350px] rounded-[20px] bg-white relative top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center gap-28 ">
+        <button onClick={()=>setShow(false)} className=' text-[20px] text-[#515151] font-[100] absolute top-4 right-4'><GrClose/></button>
             <p className='text-[30px] font-[700] text-[#6889FF]'>Anda yakin Ingin Logout?</p>
             <div className="action flex  gap-10">
                 <button onClick={()=>setShow(false)} className='w-[200px] h-[50px] text-[15px] font-[700] bg-[#F6F6F6] text-[#515151] rounded-[10px]'>Batal</button>
