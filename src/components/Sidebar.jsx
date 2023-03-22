@@ -28,7 +28,6 @@ const Sidebar = () => {
             <NavLink className={activeLink}   to='home'   ><i><GoHome/></i></NavLink>
             <NavLink className={activeLink}  to='table'><i ><BsClipboardMinus/></i></NavLink>
             <NavLink className={activeLink} to='add' ><i ><CgAddR/></i></NavLink>
-            <NavLink className={activeLink} to='edit' ><i ><FiEdit/></i></NavLink>
         </div>
         <div className="bot mb-[41px] flex justify-center">
         <i onClick={()=>setShow(true)} className='text-[25px] text-[#696a6c] hover:bg-slate-300 p-2 rounded-[50%] cursor-pointer '><IoExitOutline/></i>

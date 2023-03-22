@@ -18,7 +18,7 @@ const Routing = () => {
                 <Dashboard />
             }
           />
-          <Route path='/detail' element={<Detail/>}/>
+          <Route path='/detail/:id' element={<Detail/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
