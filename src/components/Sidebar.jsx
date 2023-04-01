@@ -77,8 +77,8 @@ instance.request(config)
                 </span>
                 </NavLink>
         </div>
-        <div className="bot mb-[41px] flex md:justify-center pl-8 md:pl-0 items-center cursor-pointer gap-2">
-        <i onClick={()=>setShow(true)} className='text-[25px] text-[#696a6c] hover:bg-slate-300 p-2 rounded-[50%] '><IoExitOutline/>
+        <div onClick={()=>setShow(true)} className="bot mb-[41px] flex md:justify-center pl-8 md:pl-0 items-center cursor-pointer gap-2">
+        <i  className='text-[25px] text-[#696a6c] hover:bg-slate-300 p-2 rounded-[50%] '><IoExitOutline/>
         </i>
         <h1 className='md:hidden text-[20px] text-[#696a6c]'>Keluar</h1>
         </div>

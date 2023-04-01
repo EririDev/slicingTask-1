@@ -35,6 +35,7 @@ axios.request(config)
 .catch((error) => {
   console.log(error);
   setLoading(false)
+  alert('Email/Password yang anda masukkan salah </br> tolong masukkan data dengan benar')
 });
   }
   if(loading){
