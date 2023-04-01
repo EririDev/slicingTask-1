@@ -49,28 +49,61 @@ const Detail = () => {
     getData();
   },
   []);
+  const userName = localStorage.getItem("user");
+  const nama = userName.replace(/[0-9]/gi, "");
   if(loading){
     return(
-      <div className="loading w-full h-screen flex justify-center items-center">
-        <h1>Loading...</h1>
-      </div>)
+      <div className='w-full flex justify-center items-center animate-pulse'>
+            <main className='lg:w-[60%] md:w-[80%] w-full ' >
+      <nav className="md:justify-start md:items-center w-full flex flex-col md:flex-row items-center md:w-[80%] gap-5 ">
+          <div className="flex justify-between  md:shadow-none w-full md:w-auto shadow-[0px_4px_4px_rgba(0,0,0,0.25)] p-5 items-center">
+          <NavLink to='/dashboard/table'> <img src={Back} className='w-[15px]' alt="" /></NavLink>
+            <h1 className="font-[700] lg:text-[25px] text-[20px] md:hidden">Hi,{nama.toUpperCase()}!</h1>
+          </div>
+      <h1 className='text-[25px] font-[700] md:mb-0 mb-5 bg-slate-300 w-80 h-6 rounded-md'></h1>
+        </nav>
+      <article className='flex flex-col gap-5 ml-5 mr-5'>
+        <div className="img-container w-full rounded-[8px] lg:h-[440px] h-[350px] bg-slate-300 overflow-hidden ">
+          <img  className='w-full h-full object-cover '  />
+        </div>
+        <div className="description flex flex-col gap-2 pl-1 ">
+          <div className="location flex  items-center gap-3 ">
+            <img className='w-[25px]' src={Location} alt="" />
+            <p className='text-[15px] font-[ 400] bg-slate-300 w-60 h-5 rounded-md '></p>
+          </div>
+          <div className="email flex   items-center gap-3">
+          <img className='w-[25px]' src={Email} alt="" />
+          <p className='text-[15px] font-[ 400] bg-slate-300 w-60 h-5 rounded-md '></p>
+          </div>
+          <div className="phone flex   items-center gap-3 ">
+          <img className='w-[25px]' src={Phone} alt="" />
+          <p className='tex t-[15px] font-[ 400] bg-slate-300 w-60 h-5 rounded-md'></p>
+          </div>
+        </div>
+      </article>
+      </main>
+          )
+    </div>)
   }else{
   return (
-    <div className='w-full p-5  flex justify-center items-center'>
+    <div className='w-full flex justify-center items-center'>
       {
         data.map((item)=>{
           return(
-            <main className='w-[60%] '>
-      <header className='flex items-center gap-5 mb-3'>  
-      <NavLink to='/dashboard/table'> <img src={Back} className='w-[15px]' alt="" /></NavLink>
-        <h1 className='text-[25px] font-[700]'>{item.name}</h1>
-      </header>
-      <article className='flex flex-col gap-5'>
-        <div className="img-container w-full rounded-[8px] h-[440px] overflow-hidden ">
+            <main className='lg:w-[60%] md:w-[80%] w-full ' key={item.id}>
+      <nav className="md:justify-start md:items-center w-full flex flex-col md:flex-row items-center md:w-[80%] gap-5 ">
+          <div className="flex justify-between  md:shadow-none w-full md:w-auto shadow-[0px_4px_4px_rgba(0,0,0,0.25)] p-5 items-center">
+          <NavLink to='/dashboard/table'> <img src={Back} className='w-[15px]' alt="" /></NavLink>
+            <h1 className="font-[700] lg:text-[25px] text-[20px] md:hidden">Hi,{nama.toUpperCase()}!</h1>
+          </div>
+      <h1 className='text-[25px] font-[700] md:mb-0 mb-5'>{item.name}</h1>
+        </nav>
+      <article className='flex flex-col gap-5 ml-5 mr-5'>
+        <div className="img-container w-full rounded-[8px] lg:h-[440px] h-[350px] overflow-hidden ">
           <img src={item.photo} className='w-full h-full object-cover ' alt="" />
         </div>
         <div className="description flex flex-col gap-2 pl-1 ">
-          <div className="location flex  items-center gap-3">
+          <div className="location flex  items-center gap-3 ">
             <img className='w-[25px]' src={Location} alt="" />
             <p className='text-[15px] font-[ 400]'>{item.address},{item.city}</p>
           </div>
@@ -78,9 +111,9 @@ const Detail = () => {
           <img className='w-[25px]' src={Email} alt="" />
           <p className='text-[15px] font-[ 400]'>{item.email}</p>
           </div>
-          <div className="phone flex   items-center gap-3">
+          <div className="phone flex   items-center gap-3 ">
           <img className='w-[25px]' src={Phone} alt="" />
-          <p className='text-[15px] font-[ 400]'>{item.phone}</p>
+          <p className='tex t-[15px] font-[ 400]'>{item.phone}</p>
           </div>
         </div>
       </article>
